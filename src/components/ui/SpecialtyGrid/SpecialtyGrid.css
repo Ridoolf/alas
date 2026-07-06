@@ -53,6 +53,18 @@
   color: var(--color-acento-oscuro);
 }
 
+.specialty-grid__item--vacio .specialty-grid__link--vacio {
+  display: block;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  pointer-events: none;
+  cursor: default;
+}
+
+.specialty-grid__item--vacio .specialty-grid__link--vacio:hover {
+  background: transparent;
+}
+
 .specialty-grid__accion {
   color: var(--color-acento);
   font-weight: 700;

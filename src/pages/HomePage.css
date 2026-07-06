@@ -66,10 +66,19 @@
   padding: 0;
   display: grid;
   gap: 0.75rem;
+  align-items: stretch;
+}
+
+.home__accesos-grid > li {
+  display: flex;
+  min-height: 0;
 }
 
 .home__acceso-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
   padding: 1rem;
   border: 1px solid var(--color-borde);
   background: var(--color-blanco);
@@ -95,7 +104,9 @@
 
 .home__acceso-desc {
   display: block;
+  flex: 1;
   font-size: 0.875rem;
+  line-height: 1.45;
   color: var(--color-texto-claro);
 }
 

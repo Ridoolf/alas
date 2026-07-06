@@ -3,7 +3,15 @@ import { getWhatsAppTurnosUrl } from '../../../data/content'
 import './SpecialtyGrid.css'
 
 function SpecialtyGrid({ columnas = [] }) {
-  const planas = columnas.flat()
+  const maxFilas = Math.max(...columnas.map((col) => col.length), 0)
+  const columnasNormalizadas = columnas.map((col) => {
+    const normalizada = [...col]
+    while (normalizada.length < maxFilas) {
+      normalizada.push({ nombre: '', vacio: true })
+    }
+    return normalizada
+  })
+  const planas = columnas.flat().filter((esp) => !esp.vacio)
 
   return (
     <div className="specialty-grid contenedor">
@@ -27,13 +35,20 @@ function SpecialtyGrid({ columnas = [] }) {
       </ul>
 
       <div className="specialty-grid__desktop">
-        {columnas.map((col, i) => (
-          <ul key={i} className="specialty-grid__col">
-            {col.map((esp) => (
-              <li key={esp.nombre} className="specialty-grid__item">
-                <Link to={esp.href} className="specialty-grid__link">
-                  {esp.nombre}
-                </Link>
+        {columnasNormalizadas.map((col, colIndex) => (
+          <ul key={colIndex} className="specialty-grid__col">
+            {col.map((esp, rowIndex) => (
+              <li
+                key={esp.vacio ? `vacio-${colIndex}-${rowIndex}` : esp.nombre}
+                className={`specialty-grid__item${esp.vacio ? ' specialty-grid__item--vacio' : ''}`}
+              >
+                {esp.vacio ? (
+                  <span className="specialty-grid__link specialty-grid__link--vacio" aria-hidden="true" />
+                ) : (
+                  <Link to={esp.href} className="specialty-grid__link">
+                    {esp.nombre}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

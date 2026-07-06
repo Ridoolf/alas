@@ -16,9 +16,6 @@
 
 .footer__logo-link {
   display: inline-block;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid var(--color-borde);
-  background: var(--color-blanco);
   text-decoration: none;
 }
 
