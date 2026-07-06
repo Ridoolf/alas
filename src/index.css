@@ -1,0 +1,199 @@
+/* =============================================
+   ESTILOS GLOBALES — ALAS Centro Médico
+   ============================================= */
+
+:root {
+  --color-fondo: #f7f5f0;
+  --color-fondo-patron: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.012) 2px,
+    rgba(0, 0, 0, 0.012) 4px
+  );
+  --color-blanco: #fff;
+  --color-texto: #333;
+  --color-texto-claro: #666;
+  --color-borde: #c8c8c8;
+  --color-borde-oscuro: #999;
+  --color-nav-fondo: linear-gradient(180deg, #e8e8e8 0%, #d4d4d4 100%);
+  --color-nav-hover: #f0f0f0;
+  --color-nav-activo: #fff;
+  --color-acento: #4a7fb5;
+  --color-acento-claro: #d4e4f2;
+  --color-acento-oscuro: #2c5282;
+  --color-placeholder: #e8e8e8;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+
+  --max-ancho: 1100px;
+  --header-altura: auto;
+  --navbar-altura: 44px;
+  --espacio-seccion: clamp(1.5rem, 4vw, 2.5rem);
+  --espacio-contenedor: clamp(1rem, 3vw, 1.5rem);
+  --radius-sm: 2px;
+  --radius-none: 0;
+  --sombra-caja: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --sombra-flotante: 3px 5px 14px rgba(0, 0, 0, 0.16), 1px 2px 5px rgba(0, 0, 0, 0.1);
+  --sombra-flotante-grande: 5px 8px 22px rgba(0, 0, 0, 0.2), 2px 3px 8px rgba(0, 0, 0, 0.12);
+  --transicion: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--navbar-altura) + 1rem);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  background-image: var(--color-fondo-patron);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0));
+}
+
+@media (min-width: 900px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-acento-oscuro);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-acento);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-sans);
+  line-height: 1.25;
+  margin: 0 0 0.75em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background: var(--color-acento-oscuro);
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--max-ancho);
+  margin-inline: auto;
+  padding-inline: var(--espacio-contenedor);
+}
+
+.contenedor--estrecho {
+  max-width: 65ch;
+}
+
+.pagina {
+  padding-block: var(--espacio-seccion);
+}
+
+.pagina__contenido {
+  padding-block: var(--espacio-seccion);
+}
+
+.texto-prosa {
+  max-width: 65ch;
+}
+
+.texto-prosa p:last-child {
+  margin-bottom: 0;
+}
+
+.separador-zigzag {
+  border: none;
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-borde) 0,
+    var(--color-borde) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  margin: 1.5rem 0;
+}
+
+.layout-main {
+  flex: 1;
+}
+
+@media (min-width: 900px) {
+  html {
+    scroll-padding-top: calc(var(--navbar-altura) + 80px);
+  }
+}

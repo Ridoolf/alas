@@ -1,0 +1,72 @@
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transicion), color var(--transicion), border-color var(--transicion);
+}
+
+.action-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn__texto {
+  line-height: 1.2;
+}
+
+.action-btn--primary {
+  background: var(--color-acento-oscuro);
+  color: var(--color-blanco);
+  border-color: var(--color-acento-oscuro);
+}
+
+.action-btn--primary:hover {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-blanco);
+}
+
+.action-btn--secondary {
+  background: var(--color-blanco);
+  color: var(--color-acento-oscuro);
+  border-color: var(--color-acento);
+}
+
+.action-btn--secondary:hover {
+  background: var(--color-acento-claro);
+  color: var(--color-acento-oscuro);
+}
+
+.action-btn--muted {
+  background: var(--color-acento-claro);
+  color: var(--color-acento-oscuro);
+  border-color: var(--color-acento);
+}
+
+.action-btn--muted:hover {
+  background: var(--color-blanco);
+  border-color: var(--color-acento-oscuro);
+  color: var(--color-acento-oscuro);
+}
+
+.action-btn--ghost {
+  background: transparent;
+  color: var(--color-acento-oscuro);
+  border-color: var(--color-borde);
+}
+
+.action-btn--ghost:hover {
+  background: var(--color-blanco);
+  border-color: var(--color-acento);
+}

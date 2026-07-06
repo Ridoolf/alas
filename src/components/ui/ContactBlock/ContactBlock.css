@@ -1,0 +1,147 @@
+.contact-block {
+  padding-block: var(--espacio-seccion);
+}
+
+.contact-block__ayuda {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--color-acento-claro);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+}
+
+.contact-block__acciones-principales {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-block__acciones-principales .action-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.contact-block__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-block__seccion {
+  padding: 1rem;
+  border: 1px solid var(--color-borde);
+  background: var(--color-blanco);
+  box-shadow: var(--sombra-caja);
+}
+
+.contact-block__titulo {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-acento-oscuro);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-acento-claro);
+}
+
+.contact-block__address {
+  font-style: normal;
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-block__mapa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.contact-block__tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-block__tel .contact-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.contact-block__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.contact-block__lista li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-block__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-block__email .contact-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.contact-block__horarios {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-acento-oscuro);
+}
+
+@media (min-width: 640px) {
+  .contact-block__acciones-principales {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-block__acciones-principales .action-btn {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-block__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-block__seccion:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-block__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-block__seccion:last-child {
+    grid-column: auto;
+  }
+}

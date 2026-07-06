@@ -1,0 +1,133 @@
+.pagina--home {
+  padding-bottom: 0;
+}
+
+.home__contenido {
+  padding-block: var(--espacio-seccion);
+  text-align: center;
+}
+
+.home__titulo {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.home__intro {
+  max-width: 52ch;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-texto);
+  text-align: center;
+}
+
+.home__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 360px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.home__ctas .action-btn {
+  width: 100%;
+}
+
+.home__horarios {
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-acento-oscuro);
+}
+
+.home__accesos {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.home__accesos-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.home__accesos-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.home__acceso-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid var(--color-borde);
+  background: var(--color-blanco);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--sombra-caja);
+  transition: border-color var(--transicion), background var(--transicion);
+}
+
+.home__acceso-card:hover {
+  border-color: var(--color-acento);
+  background: var(--color-acento-claro);
+  color: inherit;
+}
+
+.home__acceso-label {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-acento-oscuro);
+  margin-bottom: 0.25rem;
+}
+
+.home__acceso-desc {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-texto-claro);
+}
+
+.home__mapa {
+  margin-top: 1.5rem;
+}
+
+.home__mapa .action-btn {
+  width: 100%;
+  max-width: 480px;
+}
+
+@media (min-width: 640px) {
+  .home__ctas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: none;
+  }
+
+  .home__ctas .action-btn {
+    width: auto;
+    min-width: 160px;
+  }
+
+  .home__accesos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .home__accesos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

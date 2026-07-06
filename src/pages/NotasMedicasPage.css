@@ -1,0 +1,40 @@
+.notas-medicas {
+  max-width: 52rem;
+}
+
+.notas-medicas__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.notas-medicas__volver {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-acento-oscuro);
+  text-decoration: none;
+  transition: color var(--transicion);
+}
+
+.notas-medicas__volver:hover {
+  color: var(--color-acento);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+@media (min-width: 640px) {
+  .notas-medicas__grid {
+    gap: 1.15rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .notas-medicas__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nota-card:first-child {
+    grid-column: 1 / -1;
+  }
+}

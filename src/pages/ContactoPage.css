@@ -1,0 +1,43 @@
+.pagina--contacto .contacto__bloques {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: clamp(1rem, 2.5vw, 1.35rem);
+}
+
+.pagina--contacto .contacto-resumen,
+.pagina--contacto .contact-form {
+  width: 100%;
+}
+
+.pagina--contacto .contact-form {
+  padding-block: 0;
+}
+
+.pagina--contacto .contact-form__panel,
+.pagina--contacto .contacto-resumen {
+  padding: 1rem;
+}
+
+.pagina--contacto .contacto__panoramica {
+  padding-block: 0.85rem var(--espacio-seccion);
+}
+
+.pagina--contacto .contacto__panoramica .image-placeholder,
+.pagina--contacto .contacto__panoramica img {
+  max-height: 130px;
+  aspect-ratio: 21 / 6;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .pagina--contacto .contacto__bloques {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .pagina--contacto .contacto__panoramica .image-placeholder,
+  .pagina--contacto .contacto__panoramica img {
+    max-height: 150px;
+  }
+}

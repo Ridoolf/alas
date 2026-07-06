@@ -1,0 +1,127 @@
+.header {
+  background: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
+  padding-block: 0.75rem;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.header__logo {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__logo:hover {
+  opacity: 0.92;
+}
+
+.header__logo-img {
+  display: block;
+  width: min(220px, 70vw);
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.header__logo-placeholder {
+  width: min(220px, 70vw);
+}
+
+.header__logo-placeholder .image-placeholder {
+  margin: 0;
+  box-shadow: none;
+  border: 1px solid var(--color-borde);
+}
+
+.header__contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: var(--color-texto-claro);
+  line-height: 1.4;
+}
+
+.header__linea {
+  margin: 0;
+}
+
+.header__linea--direccion {
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-borde-oscuro);
+}
+
+.header__linea--tel {
+  letter-spacing: 0.01em;
+}
+
+.header__link {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__link:hover {
+  color: var(--color-acento);
+}
+
+.header__link--direccion {
+  white-space: nowrap;
+}
+
+@media (max-width: 399px) {
+  .header__contacto {
+    font-size: 0.75rem;
+  }
+
+  .header__link--direccion {
+    white-space: normal;
+  }
+}
+
+.header__acciones {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.header__btn-turnos {
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 900px) {
+  .header {
+    padding-block: 1rem;
+  }
+
+  .header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .header__contacto {
+    align-items: flex-end;
+    text-align: right;
+    font-size: 0.875rem;
+  }
+
+  .header__linea--direccion {
+    align-self: stretch;
+  }
+
+  .header__acciones {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

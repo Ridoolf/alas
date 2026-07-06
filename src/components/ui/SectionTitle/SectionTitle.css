@@ -1,0 +1,32 @@
+.section-title {
+  background: var(--color-acento-claro);
+  border-block: 1px solid var(--color-borde);
+}
+
+.section-title__texto {
+  margin: 0;
+  padding-block: 0.75rem;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-acento-oscuro);
+}
+
+.section-title--right .section-title__texto {
+  text-align: right;
+}
+
+.section-title--center .section-title__texto {
+  text-align: center;
+}
+
+.section-title--left .section-title__texto {
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .section-title__texto {
+    padding-block: 1rem;
+  }
+}
